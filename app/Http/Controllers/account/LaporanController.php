@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Maatwebsite\Excel\Facades\Excel;
-use App\Exports\UsersExport;
+use App\Exports\LaporanExport;
 
 class LaporanController extends Controller
 {
@@ -88,6 +88,6 @@ class LaporanController extends Controller
 
     public function exportexcel()
     {
-        return Excel::download(new UsersExport, 'users.xlsx');
+        return Excel::download(new LaporanExport, 'users.xlsx');
     }
 }

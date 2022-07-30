@@ -5,7 +5,7 @@ namespace App\Exports;
 use App\User;
 use Maatwebsite\Excel\Concerns\FromCollection;
 
-class UsersExport implements FromCollection
+class LaporanExport implements FromCollection
 {
     /**
      * @return \Illuminate\Support\Collection
