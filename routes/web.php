@@ -44,9 +44,9 @@ Route::prefix('account')->group(function () {
     //laporan credit
     Route::get('/laporan_credit', 'account\LaporanCreditController@index')->name('account.laporan_credit.index');
     Route::get('/laporan_credit/check', 'account\LaporanCreditController@check')->name('account.laporan_credit.check');
-    //laporan credit
-    Route::get('/laporan', 'account\LaporanController@index')->name('account.laporan.index');
-    Route::get('/laporan/check', 'account\LaporanController@check')->name('account.laporan.check');
+    //laporan
+    Route::get('/laporan_complete', 'account\LaporanCompleteController@index')->name('account.laporan_complete.index');
+    Route::get('/laporan_complete/check', 'account\LaporanCompleteController@check')->name('account.laporan_complete.check');
     //export excel
-    Route::get('/laporan/export_excel', 'account\LaporanController@exportexcel')->name('account.laporan.exportexcel');
+    Route::get('/laporan_complete/export_excel', 'account\LaporanCompleteController@exportexcel')->name('account.laporan.exportexcel');
 });

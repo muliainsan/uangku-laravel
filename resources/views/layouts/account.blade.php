@@ -105,7 +105,8 @@
                                         UANG MASUK</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown {{ setActive('account/categories_credit'). setActive('account/credit') }}">
+                        <li
+                            class="dropdown {{ setActive('account/categories_credit'). setActive('account/credit') . setActive('account/laporan_credit')}}">
                             <a href="#" class="nav-link has-dropdown"><i class="fas fa-wallet"></i><span>UANG
                                     KELUAR</span></a>
                             <ul class="dropdown-menu">
@@ -119,7 +120,7 @@
                         </li>
 
                         <li
-                            class="dropdown {{ setActive('account/laporan_debit'). setActive('account/laporan_credit') .setActive('account/laporan')}} ">
+                            class="dropdown {{ setActive('account/laporan_complete'). setActive('account/laporan_debit'). setActive('account/laporan_credit') }} ">
                             <a href="#" class="nav-link has-dropdown"><i
                                     class="fas fa-chart-pie"></i><span>LAPORAN</span></a>
                             <ul class="dropdown-menu">
@@ -129,9 +130,10 @@
                                 <li class="{{ setActive('account/laporan_credit') }}"><a class="nav-link"
                                         href="{{ route('account.laporan_credit.index') }}"><i
                                             class="fas fa-chart-area"></i> UANG KELUAR</a></li>
-                                <li class="{{ setActive('account/laporan') }}"><a class=" nav-link"
-                                        href="{{ route('account.laporan.index') }}"><i
-                                            class="fas fa-chart-pie"></i>SEMUA</a></li>
+                                <li class="{{ setActive('account/laporan_complete') }}"><a class="nav-link"
+                                        href="{{ route('account.laporan_complete.index') }}"><i
+                                            class="fas fa-chart-pie"></i>
+                                        SEMUA</a></li>
                             </ul>
                         </li>
                     </ul>

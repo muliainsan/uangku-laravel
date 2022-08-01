@@ -10,10 +10,10 @@ use App\Http\Controllers\Controller;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\LaporanExport;
 
-class LaporanController extends Controller
+class LaporanCompleteController extends Controller
 {
     /**
-     * LaporanController constructor.
+     * LaporanCompleteController constructor.
      */
     public function __construct()
     {
@@ -25,7 +25,7 @@ class LaporanController extends Controller
      */
     public function index()
     {
-        return view('account.laporan.index');
+        return view('account.laporan_complete.index');
     }
 
     /**
@@ -66,7 +66,7 @@ class LaporanController extends Controller
             ->appends(request()->except('page'));
         session()->flashInput($request->input());
 
-        return view('account.laporan.index', compact('data', 'tanggal_awal', 'tanggal_akhir'));
+        return view('account.laporan_complete.index', compact('data', 'tanggal_awal', 'tanggal_akhir'));
     }
 
     public function credit($tanggal_awal, $tanggal_akhir)

@@ -17,7 +17,7 @@ Laporan Uang Keluar - UANGKU
                     <h4><i class="fas fa-chart-area"></i> LAPORAN KESELURUHAN</h4>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('account.laporan.check') }}" method="GET">
+                    <form action="{{ route('account.laporan_complete.check') }}" method="GET">
                         <div class="form-group">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" name="pemasukan" class="custom-control-input" id="pemasukan" {{
